@@ -19,7 +19,7 @@ def test_login():
 def test_dashboard_without_token():
     """Testa acesso ao dashboard sem token"""
     response = client.get("/dashboard/")
-    assert response.status_code == 403
+    assert response.status_code == 401
 
 def test_dashboard_with_token():
     """Testa acesso ao dashboard com token válido"""
